@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master the Stock Market | Expert Trading Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+        }
+        
+        .stats-animation {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(16, 185, 129, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text"><img src="./logo.jpeg" alt="Logo" width="65px"></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    <a href="#courses" class="text-gray-700 hover:text-green-600 transition">Courses</a>
+                    <a href="#results" class="text-gray-700 hover:text-green-600 transition">Results</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-green-600 transition">Testimonials</a>
+                </div>
+                <button class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:opacity-90 transition">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 gradient-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Master the Art of <span class="text-green-400">Stock Trading</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-300">
+                        Learn proven strategies from a Wall Street veteran with 15+ years of experience. Transform your financial future today.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-400 transition pulse-button">
+                            Start Free Trial
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-gray-900 transition">
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-2xl font-bold text-gray-800">Portfolio Growth</span>
+                            <span class="text-green-500 font-bold text-xl">↗ +247%</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">AAPL</span>
+                                <span class="text-green-500 font-semibold">+12.5%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">TSLA</span>
+                                <span class="text-green-500 font-semibold">+18.2%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">MSFT</span>
+                                <span class="text-green-500 font-semibold">+9.8%</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 h-32 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg flex items-end justify-around p-4">
+                            <div class="w-12 bg-green-500 rounded-t" style="height: 60%"></div>
+                            <div class="w-12 bg-green-500 rounded-t" style="height: 75%"></div>
+                            <div class="w-12 bg-green-500 rounded-t" style="height: 50%"></div>
+                            <div class="w-12 bg-green-500 rounded-t" style="height: 90%"></div>
+                            <div class="w-12 bg-green-500 rounded-t" style="height: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stats-animation">
+                    <div class="text-4xl font-bold gradient-text mb-2">15+</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div class="stats-animation" style="animation-delay: 0.2s">
+                    <div class="text-4xl font-bold gradient-text mb-2">10K+</div>
+                    <div class="text-gray-600">Students Taught</div>
+                </div>
+                <div class="stats-animation" style="animation-delay: 0.4s">
+                    <div class="text-4xl font-bold gradient-text mb-2">98%</div>
+                    <div class="text-gray-600">Success Rate</div>
+                </div>
+                <div class="stats-animation" style="animation-delay: 0.6s">
+                    <div class="text-4xl font-bold gradient-text mb-2">₹2M+</div>
+                    <div class="text-gray-600">Student Profits</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Premium Courses</h2>
+                <p class="text-xl text-gray-600">Choose the perfect program for your trading journey</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-green-600 text-4xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold mb-4">Beginner Bootcamp</h3>
+                    <p class="text-gray-600 mb-6">Master the fundamentals of stock trading from scratch. Perfect for complete beginners.</p>
+                    <div class="text-3xl font-bold gradient-text mb-6">₹299</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> 40+ Video Lessons
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> Trading Simulator Access
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> Certificate of Completion
+                        </li>
+                    </ul>
+                    <button class="w-full gradient-bg text-white py-3 rounded-full font-semibold hover:opacity-90 transition">
+                        Enroll Now
+                    </button>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-4 border-green-500 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
+                        MOST POPULAR
+                    </div>
+                    <div class="text-green-600 text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">Advanced Trading</h3>
+                    <p class="text-gray-600 mb-6">Deep dive into technical analysis, options trading, and advanced strategies.</p>
+                    <div class="text-3xl font-bold gradient-text mb-6">₹599</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> 100+ Video Lessons
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> Live Trading Sessions
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> Private Discord Community
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> 1-on-1 Mentorship
+                        </li>
+                    </ul>
+                    <button class="w-full gradient-bg text-white py-3 rounded-full font-semibold hover:opacity-90 transition">
+                        Enroll Now
+                    </button>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-green-600 text-4xl mb-4">👑</div>
+                    <h3 class="text-2xl font-bold mb-4">Elite Masterclass</h3>
+                    <p class="text-gray-600 mb-6">Exclusive program for serious traders ready to go professional.</p>
+                    <div class="text-3xl font-bold gradient-text mb-6">₹1,299</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> Lifetime Access
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> Weekly Group Calls
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> Personal Trading Coach
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-green-500 mr-2">✓</span> Exclusive Strategies
+                        </li>
+                    </ul>
+                    <button class="w-full gradient-bg text-white py-3 rounded-full font-semibold hover:opacity-90 transition">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Student Success Stories</h2>
+                <p class="text-xl text-gray-600">Real results from real traders</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            S
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-800">Sarah Johnson</div>
+                            <div class="text-sm text-gray-600">Software Engineer</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Went from zero knowledge to making consistent profits in just 3 months. The strategies are pure gold!"</p>
+                    <div class="mt-4 text-yellow-400">★★★★★</div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            M
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-800">Michael Chen</div>
+                            <div class="text-sm text-gray-600">Business Owner</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Best investment I've ever made. My portfolio grew 180% in the first year. Absolutely life-changing!"</p>
+                    <div class="mt-4 text-yellow-400">★★★★★</div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            E
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-800">Emily Rodriguez</div>
+                            <div class="text-sm text-gray-600">Marketing Manager</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The mentorship and community support is incredible. I now trade confidently and quit my 9-5!"</p>
+                    <div class="mt-4 text-yellow-400">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Transform Your Financial Future?</h2>
+            <p class="text-xl text-gray-300 mb-8">Join thousands of successful traders who started their journey with us</p>
+            <button class="bg-green-500 text-white px-12 py-4 rounded-full font-bold text-xl hover:bg-green-400 transition pulse-button">
+                Start Your Free Trial Today
+            </button>
+            <p class="text-gray-300 mt-4">No credit card required • 7-day money-back guarantee</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4 gradient-text">Harshflix</div>
+                    <p class="text-gray-400">Empowering traders worldwide with expert knowledge and proven strategies.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Courses</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-white transition">YouTube</a></li>
+                        <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Harshflix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
